@@ -15,7 +15,7 @@ export const findLHS = function (nums) {
       nums[i] === nums[i + 1]
     ) {
       counter++;
-      if (!currentNums) {
+      if()
         currentNums = [nums[i], nums[i + 1]];
       }
     } else {

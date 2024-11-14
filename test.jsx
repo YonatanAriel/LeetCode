@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import { findLHS } from "./src/solutions/sliding-window/594";
+import { findMaxAverage } from "./src/solutions/sliding-window/649";
 
 function Test() {
   useEffect(() => {
-    const result = findLHS([1, 3, 2, 2, 5, 2, 3, 7]);
+    const result = findMaxAverage([0, 1, 1, 3, 3], 4);
     console.log("result = ", result);
   }, []);
 
