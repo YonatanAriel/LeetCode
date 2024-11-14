@@ -4,13 +4,13 @@
  * @return {boolean}
  */
 export const containsNearbyDuplicate = function (nums, k) {
-  let distinctObj = { number: index };
-
-  for (let i = 0; i < nums.length; i++) {
-    if (distinctObj[i]) {
-      if (i - index < k) return true;
+    let distinctObj = {};
+  
+    for (let i = 0; i < nums.length; i++) {
+      if (typeof (distinctObj[nums[i]]) === "number") {
+        if (i - distinctObj[nums[i]] <= k) return true;
+      }
+      distinctObj[nums[i]] = i
     }
-    distinctObj[i] = index;
-  }
-  return false;
-};
+    return false;
+  };
