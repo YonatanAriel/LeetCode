@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import { findMaxAverage } from "./src/solutions/sliding-window/649";
+import { decrypt } from "./src/solutions/sliding-window/1652";
 
 function Test() {
   useEffect(() => {
-    const result = findMaxAverage([0, 1, 1, 3, 3], 4);
+    const result = decrypt([2, 4, 9, 3], -2);
     console.log("result = ", result);
   }, []);
 

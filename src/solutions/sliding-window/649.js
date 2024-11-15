@@ -3,6 +3,7 @@
  * @param {number} k
  * @return {number}
  */
+//solved
 export const findMaxAverage = function (nums, k) {
   let res = 0;
   let currentSum = 0;
