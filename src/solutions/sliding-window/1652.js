@@ -6,11 +6,14 @@
 export const decrypt = function (code, k) {
   if (k == 0) return code.fill(0, 0, code.length);
 
-  if (k > 0) {
-    let firstKElements = code.slice(0, k);
-    code.push(...firstKElements);
+  const isKPositive = k > 0;
+  let addedKElements = isKPositive ? code.slice(0, k) : code.slice(k);
+  isKPositive ? code.push(...addedKElements) : code.unshift(...addedKElements);
 
-    let currentSum = 0;
+  const absoluteK = Math.abs(k);
+  let currentSum = 0;
+
+  if (isKPositive) {
     for (let i = 0; i < k; i++) {
       currentSum += code[i];
     }
@@ -19,21 +22,16 @@ export const decrypt = function (code, k) {
       currentSum += -code[i] + code[i + k];
       code[i] = currentSum;
     }
-    return code.slice(0, code.length - k);
+  } else {
+    for (let i = code.length - 1; i >= code.length - absoluteK; i--) {
+      currentSum += code[i];
+    }
+
+    for (let i = code.length - 1; i >= absoluteK; i--) {
+      currentSum += -code[i] + code[i - absoluteK];
+      code[i] = currentSum;
+    }
   }
 
-  let lastKElements = code.slice(k);
-  code.unshift(...lastKElements);
-  let currentSum = 0;
-  const positiveK = Math.abs(k);
-  for (let i = code.length - 1; i >= code.length - positiveK; i--) {
-    currentSum += code[i];
-  }
-
-  for (let i = code.length - 1; i >= positiveK; i--) {
-    currentSum += -code[i] + code[i - positiveK];
-    code[i] = currentSum;
-  }
-
-  return code.slice(positiveK);
+  return isKPositive ? code.slice(0, code.length - k) : code.slice(absoluteK);
 };
