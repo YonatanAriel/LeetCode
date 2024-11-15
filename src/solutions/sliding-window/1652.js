@@ -3,6 +3,7 @@
  * @param {number} k
  * @return {number[]}
  */
+//solved
 export const decrypt = function (code, k) {
   if (k == 0) return code.fill(0, 0, code.length);
 

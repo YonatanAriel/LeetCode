@@ -1,10 +1,9 @@
 import { useEffect } from "react";
-import { decrypt } from "./src/solutions/sliding-window/1652";
+import { countGoodSubstrings } from "./src/solutions/sliding-window/1786";
 
 function Test() {
   useEffect(() => {
-    // const result = decrypt([2, 4, 9, 3], -2);
-    const result = decrypt([5, 7, 1, 4], 3);
+    const result = countGoodSubstrings("aababcabc");
     console.log("result = ", result);
   }, []);
 
