@@ -2,6 +2,7 @@
  * @param {number[]} nums
  * @return {number}
  */
+//unsolved
 export const findLHS = function (nums) {
   let result = 0;
   let counter = 0;
