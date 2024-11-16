@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { minimumDifference } from "./src/solutions/sliding-window/1984";
+import { divisorSubstrings } from "./src/solutions/sliding-window/2269";
 
 function Test() {
   useEffect(() => {
@@ -12,7 +12,7 @@ function Test() {
       39274, 81201, 43353, 75808, 14508, 17389, 10313, 90055, 43102, 18659,
       20802, 70315, 48843, 12273, 78876, 36638, 17051, 20478,
     ];
-    const result = minimumDifference([9, 4, 1, 7], 2);
+    const result = divisorSubstrings(240, 2);
     console.log("result = ", result); //2
   }, []);
 
