@@ -1,9 +1,10 @@
 import { useEffect } from "react";
-import { minimumRecolors } from "./src/solutions/sliding-window/2739";
+import { longestAlternatingSubarray } from "./src/solutions/sliding-window/2760";
 
 function Test() {
   useEffect(() => {
-    const result = minimumRecolors("WBBWWBBWBW", 7);
+    // const result = longestAlternatingSubarray([3, 6, 10], 6);
+    const result = longestAlternatingSubarray([4, 10, 3, 8, 4, 5, 4, 1], 16);
     console.log("result = ", result); //2
   }, []);
 
