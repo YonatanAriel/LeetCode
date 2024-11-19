@@ -8,6 +8,7 @@ export const maximumLengthSubstring = function (s) {
   let substringLength = 0;
 
   for (let i = 0; i < s.length; i++) {
+    // debugger;
     if (!substringObj[s[i]]) {
       substringObj[s[i]] = 1;
       substringLength++;
@@ -21,11 +22,14 @@ export const maximumLengthSubstring = function (s) {
         let innerLoopCounter = 0;
         for (let j = i - maxLength; j < i; j++) {
           innerLoopCounter++;
-          if (s[j] === substringObj[s[i]]) {
+          if (s[j] === s[i]) {
             substringLength = substringLength - innerLoopCounter;
+            substringObj[s[i]]--;
+            break;
           }
         }
       }
     }
   }
+  return maxLength;
 };
