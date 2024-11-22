@@ -1,10 +1,10 @@
 import { useEffect } from "react";
-import { maximumLengthSubstring } from "./src/solutions/sliding-window/3090";
+import { intersection } from "./src/solutions/array/349";
 
 function Test() {
   useEffect(() => {
     //
-    const result = maximumLengthSubstring("bcbbbcba");
+    const result = intersection([1, 2, 2, 1], [2, 2]);
     console.log("result = ", result); //2
   }, []);
 
