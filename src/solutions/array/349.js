@@ -7,14 +7,14 @@ export const intersection = function (nums1, nums2) {
   const hashmap = new Map();
 
   for (let i = 0; i < nums1.length; i++) {
-    hashmap.set(nums1[i], true);
+    hashmap.set(nums1[i], 1);
   }
 
   const intersectionArr = [];
-  const arr2Hashmap = new Map();
+  //   const arr2Hashmap = new Map();
   for (let i = 0; i < nums2.length; i++) {
-    if (hashmap.has(nums2[i]) && !arr2Hashmap.has(nums2[i])) {
-      arr2Hashmap.set(nums2[i], true);
+    if (hashmap.get(nums2[i]) === 1) {
+      hashmap.set(nums2[i], 2);
       intersectionArr.push(nums2[i]);
     }
   }
