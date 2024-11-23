@@ -1,10 +1,10 @@
 import { useEffect } from "react";
-import { intersect } from "./src/solutions/array/350";
+import { thirdMax } from "./src/solutions/array/414";
 
 function Test() {
   useEffect(() => {
     //
-    const result = intersect([1, 2, 2, 1], [2, 2]);
+    const result = thirdMax([3, 2, 1]);
     console.log("result = ", result); //2
   }, []);
 
