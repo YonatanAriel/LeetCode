@@ -17,11 +17,14 @@ export const intersect = function (nums1, nums2) {
     if (!hashmapValue?.nums1Count) continue;
 
     if (!hashmapValue.nums2Count) {
-      hashmap.set(nums2[i], { nums2Count: 1 });
+      hashmap.set(nums2[i], { ...hashmapValue, nums2Count: 1 });
       continue;
     }
 
-    hashmap.set(nums2[i], { nums2Count: hashmapValue.nums2Count + 1 });
+    hashmap.set(nums2[i], {
+      ...hashmapValue,
+      nums2Count: hashmapValue.nums2Count + 1,
+    });
   }
 
   const intersectionArr = [];

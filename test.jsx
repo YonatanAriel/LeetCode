@@ -1,10 +1,10 @@
 import { useEffect } from "react";
-import { intersection } from "./src/solutions/array/349";
+import { intersect } from "./src/solutions/array/350";
 
 function Test() {
   useEffect(() => {
     //
-    const result = intersection([1, 2, 2, 1], [2, 2]);
+    const result = intersect([1, 2, 2, 1], [2, 2]);
     console.log("result = ", result); //2
   }, []);
 
