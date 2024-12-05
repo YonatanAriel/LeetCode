@@ -1,10 +1,11 @@
 import { useEffect } from "react";
 import { thirdMax } from "./src/solutions/array/414";
+import { findDisappearedNumbers } from "./src/solutions/array/448";
 
 function Test() {
   useEffect(() => {
     //
-    const result = thirdMax([3, 2, 1]);
+    const result = findDisappearedNumbers([4, 3, 2, 7, 8, 2, 3, 1]);
     console.log("result = ", result); //2
   }, []);
 
