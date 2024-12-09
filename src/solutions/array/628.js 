@@ -1,0 +1,12 @@
+export const maximumProduct = function(nums) {
+    const maxNums = [nums[0], nums[1], nums[2]].sort((a, b) => a - b);
+    for(let i = 3; i < nums.length; i++){
+        for(let j = 3; j > 0; j--){
+            if(nums[i] > maxNums[j]){
+                maxNums[j] = nums[i];
+                break
+            }
+        }
+    }
+    return maxNums[0] * maxNums[1] * maxNums[2]
+};
