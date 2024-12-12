@@ -1,10 +1,10 @@
 import { useEffect } from "react";
-import { isMonotonic } from "./src/solutions/array/896";
+import { pivotIndex } from "./src/solutions/array/724";
 
 function Test() {
   useEffect(() => {
     //
-    const result = isMonotonic([6, 5, 4, 4]);
+    const result = pivotIndex([1, 7, 3, 6, 5, 6]);
     console.log("result = ", result);
   }, []);
 
