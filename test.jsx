@@ -1,10 +1,10 @@
 import { useEffect } from "react";
-import { pivotIndex } from "./src/solutions/array/724";
+import { findLengthOfLCIS } from "./src/solutions/array/674";
 
 function Test() {
   useEffect(() => {
     //
-    const result = pivotIndex([1, 7, 3, 6, 5, 6]);
+    const result = findLengthOfLCIS([1, 3, 5, 4, 2, 3, 4, 5]);
     console.log("result = ", result);
   }, []);
 
