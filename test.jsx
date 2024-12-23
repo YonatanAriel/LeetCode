@@ -1,10 +1,16 @@
 import { useEffect } from "react";
-import { findLengthOfLCIS } from "./src/solutions/array/674";
+import { findRelativeRanks } from "./src/solutions/array/506";
 
 function Test() {
   useEffect(() => {
     //
-    const result = findLengthOfLCIS([1, 3, 5, 4, 2, 3, 4, 5]);
+    const result = findRelativeRanks([
+      "Gold Medal",
+      "Silver Medal",
+      "Bronze Medal",
+      4,
+      5,
+    ]);
     console.log("result = ", result);
   }, []);
 
