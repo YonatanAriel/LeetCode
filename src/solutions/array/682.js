@@ -28,4 +28,4 @@ export const calPoints = function (operations) {
 
   return sum;
 };
-//test
+//test2
