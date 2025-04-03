@@ -1,4 +1,4 @@
-const IframeFileViewer = ({ fileUrl }) => {
+export default function IframeFileViewer({ fileUrl }) {
   const containerStyle = {
     display: "flex",
     flexDirection: "column",
@@ -13,4 +13,4 @@ const IframeFileViewer = ({ fileUrl }) => {
       <iframe src={fileUrl} width="80%" height="500px" title="File Viewer" />
     </div>
   );
-};
+}
