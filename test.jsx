@@ -1,16 +1,11 @@
 import { useEffect } from "react";
 import { findRelativeRanks } from "./src/solutions/array/506";
+import { isValid } from "./src/solutions/string/20";
 
 function Test() {
   useEffect(() => {
     //
-    const result = findRelativeRanks([
-      "Gold Medal",
-      "Silver Medal",
-      "Bronze Medal",
-      4,
-      5,
-    ]);
+    const result = isValid("()");
     console.log("result = ", result);
   }, []);
 
